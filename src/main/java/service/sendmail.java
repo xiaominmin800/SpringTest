@@ -13,7 +13,7 @@ import javax.websocket.Session;
 
 public class sendmail {
     public static void main(String[] args) {
-//        // 收件人电子邮箱
+        // 收件人电子邮箱
 //        String to = "abcd@gmail.com";
 //
 //        // 发件人电子邮箱
