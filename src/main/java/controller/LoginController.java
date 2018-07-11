@@ -15,16 +15,18 @@ import service.User;
 @RequestMapping("test")
 @Api(value = "测试类",tags = "测试接口")
 public class LoginController {
-    @Autowired
-    private StudentService testService;
-    @RequestMapping(value = "testData",produces = MediaType.APPLICATION_JSON_UTF8_VALUE,method = {RequestMethod.POST,RequestMethod.GET})
-    @ApiOperation("测试读写分离")
-    public String testDateSource(
-            @ApiParam(name = "userCode",value = "用户id",required = true)
-            @RequestParam Integer userCode){
-        return "oo";
-    }
-    public static void main(String[] args) throws Exception {
-        SpringApplication.run(LoginController.class, args);
+    @ApiOperation(value = "获取在线操作员")
+    @RequestMapping(value = "/getOperator", method = RequestMethod.GET)
+    public String getOperator(@ApiParam(value = "操作员编号", required = true) @RequestParam(value = "operatorNo") String operatorNo,
+                              @ApiParam(value = "当前页") @RequestParam(value = "pageName",required = false) Integer pageName,
+                              @ApiParam(value = "每页显示数量") @RequestParam(value = "pageSize",required = false) Integer pageSize) {
+        if (pageName != null){
+            if (pageSize != null) {
+                return "操作员编号: " + operatorNo + ",当前页码: " +pageName + ",每页显示数量: " + pageSize;
+            } else {
+                return "操作员编号: " + operatorNo + ",当前页码: " +pageName;
+            }
+        }
+        return "操作员编号: " + operatorNo;
     }
 }
