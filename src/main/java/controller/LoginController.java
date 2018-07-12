@@ -12,7 +12,7 @@ import service.StudentService;
 import service.User;
 
 @Controller
-@RequestMapping("test")
+@RequestMapping("api")
 @Api(value = "测试类",tags = "测试接口")
 public class LoginController {
     @ApiOperation(value = "获取在线操作员")

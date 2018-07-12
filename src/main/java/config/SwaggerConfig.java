@@ -13,7 +13,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 @Configuration
 @EnableSwagger2
-@ComponentScan("com.hexun.bdc.auth")
+//@ComponentScan("com.hexun.bdc.auth")
 public class SwaggerConfig {
 
     @Bean
@@ -21,7 +21,7 @@ public class SwaggerConfig {
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(apiInfo())
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.hexun.bdc.auth.controller"))
+//                .apis(RequestHandlerSelectors.basePackage("com.hexun.bdc.auth.controller"))
                 .paths(PathSelectors.any())
                 .build();
     }
