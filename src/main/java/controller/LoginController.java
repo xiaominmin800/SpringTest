@@ -11,11 +11,13 @@ import org.springframework.web.bind.annotation.*;
 import service.StudentService;
 import service.User;
 
+//@RestController
 @Controller
 @RequestMapping("api")
 @Api(value = "测试类",tags = "测试接口")
 public class LoginController {
     @ApiOperation(value = "获取在线操作员")
+    @ResponseBody
     @RequestMapping(value = "/getOperator", method = RequestMethod.GET)
     public String getOperator(@ApiParam(value = "操作员编号", required = true) @RequestParam(value = "operatorNo") String operatorNo,
                               @ApiParam(value = "当前页") @RequestParam(value = "pageName",required = false) Integer pageName,
