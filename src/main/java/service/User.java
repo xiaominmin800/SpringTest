@@ -7,8 +7,9 @@ import lombok.Data;
 import org.springframework.stereotype.Component;
 
 import java.util.Date;
-@Data
+
 @ApiModel(value="用户信息")
+@Data
 public class User {
     @ApiModelProperty("用户id")
     private Integer userCode;
@@ -18,4 +19,6 @@ public class User {
     private String userName;
     @ApiModelProperty("用户手机号")
     private String mobileNumber;
+
+
 }

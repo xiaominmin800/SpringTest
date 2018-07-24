@@ -1,6 +1,8 @@
 package controller;
 
 
+import baseinfo.LogUtil;
+import com.sun.org.apache.xpath.internal.operations.Bool;
 import io.swagger.annotations.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
@@ -10,6 +12,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import service.StudentService;
 import service.User;
+import sun.rmi.runtime.Log;
+
+import java.util.logging.Logger;
 
 //@RestController
 @Controller
@@ -30,5 +35,23 @@ public class LoginController {
             }
         }
         return "操作员编号: " + operatorNo;
+    }
+
+    @ApiOperation("添加备注")
+    @ResponseBody
+    @RequestMapping(value = "/adduser", method = RequestMethod.POST)
+    public Boolean addremark(@RequestBody(required = true) User content){
+        User user=new User();
+        try {
+            user.setUserCode(content.getUserCode());
+            user.setMobileNumber(content.getMobileNumber());
+            user.setUserName(content.getUserName());
+            user.setUserType(content.getUserType());
+            Logger.getLogger("获取的user信息为：").info(content.toString());
+            return true;
+        }
+        catch (Exception e){
+            return false;
+        }
     }
 }
