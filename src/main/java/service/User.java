@@ -20,5 +20,35 @@ public class User {
     @ApiModelProperty("用户手机号")
     private String mobileNumber;
 
+    public Integer getUserCode() {
+        return userCode;
+    }
 
+    public void setUserCode(Integer userCode) {
+        this.userCode = userCode;
+    }
+
+    public String getUserType() {
+        return userType;
+    }
+
+    public void setUserType(String userType) {
+        this.userType = userType;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    public String getMobileNumber() {
+        return mobileNumber;
+    }
+
+    public void setMobileNumber(String mobileNumber) {
+        this.mobileNumber = mobileNumber;
+    }
 }
