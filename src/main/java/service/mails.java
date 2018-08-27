@@ -35,9 +35,9 @@ public class mails {
         try {
             helper = new MimeMessageHelper(message, true);
             helper.setFrom("bill@fulintechfin.com");
-            helper.setTo("minqing.chen@fulintechfin.com");
-            helper.setSubject("123");
-            helper.setText("123", true);
+            helper.setTo("lilong.luo@fulintechfin.com");
+            helper.setSubject("2B");
+            helper.setText("2B", true);
             sender.send(message);
         } catch (MessagingException e) {
             e.printStackTrace();

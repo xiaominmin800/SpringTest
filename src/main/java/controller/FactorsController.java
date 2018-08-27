@@ -25,9 +25,9 @@ public class FactorsController {
     @ApiOperation(value = "删除factors")
     @ResponseBody
     @RequestMapping(value =  "group/delFactor", method = RequestMethod.DELETE)
-    public String delFactor(@ApiParam(value = "id") @RequestParam(value="id") Integer id) {
+    public String delFactor(@ApiParam(value = "id") @RequestParam(value="id") String name) {
         //return "nnn";
 
-        return  groupService.delFactor(id);
+        return  groupService.delFactor(name);
     }
 }

@@ -1,11 +1,16 @@
 package dao.mapper;
 
 import domain.FactorGroup;
+import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
 
 /**
  * created by chenminqing
  */
 public interface FactorGroupMapper {
 
-    FactorGroup selectByPrimaryKey(Integer id);
+    List<FactorGroup> findListByNameIfAbsent( @Param("name") String name);
+
+
 }
