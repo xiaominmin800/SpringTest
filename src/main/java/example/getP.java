@@ -8,15 +8,38 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class getP {
     public static void main(String[] args) throws Exception {
-        double []temp={0.11,0.22,0.33,0.44,0.55};
-        double []X = {0.55,0.77,1.33,1.55};
+        double []temp={
+                -1.2684,
+                0.6905841,
+                0.7841144,
+                0.6099274,
+                0.6451429,
+                0.5771117,
+                0.9042354,
+                0.9336458,
+                0.724956,
+                1.700626,
+                0.416198,
+                -2.7355376
+                    };
+        double []X = {
+                0.31,
+                0.31,
+                -0.19,
+                0.29,
+                0.35,
+                -0.23,
+                -0.09,
+                -0.11,
+                0.07,
+                -0.19,
+                0.1
+        };
         double e = Math.E;
         double z= getP.getz(temp,X);
         double P = 1/(1+(Math.pow(e,z)));
-        log.info("得到的结果P为："+P);
-        log.error("得到的结果P为："+P);
-        log.debug("得到的结果P为："+P);
         System.out.println("得到的结果P为："+P);
+        log.info("得到的结果P为："+P);
     }
 
 
@@ -26,7 +49,7 @@ public class getP {
         int size = temp.length;
         Z = temp[0];
         for(int i=1; i<size; i++){
-            Z = Z+ temp[i] * x[i-1] ;
+            Z = Z+ (temp[i] * x[i-1]) ;
         }
         Z = 0 - Z;
         return Z;

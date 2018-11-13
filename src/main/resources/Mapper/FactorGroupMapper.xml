@@ -20,7 +20,7 @@
   </sql>
   <select id="findListByNameIfAbsent" resultType="domain.FactorGroup">
     select
-    id, name_en as nameEn, name, descri
+    id, name_en as nameEn, name
     from
     t_factor_group
     <where>
@@ -32,7 +32,10 @@
     </where>
     order by id desc
   </select>
-
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from t_factor_group
+    where name = #{name,jdbcType=INTEGER}
+  </delete>
 
 
 </mapper>

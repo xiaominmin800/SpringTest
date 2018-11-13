@@ -4,7 +4,7 @@ spring:
 ###################### mysql ###########################
     datasource:
         driver-class-name: com.mysql.jdbc.Driver
-        url: jdbc:mysql://47.98.47.227:3306/eaglehorn_engine?allowMultiQueries=true&zeroDateTimeBehavior=convertToNull&characterEncoding=UTF-8&useSSL=false
+        url: jdbc:mysql://47.97.179.224:3506/eaglehorn_engine?allowMultiQueries=true&zeroDateTimeBehavior=convertToNull&characterEncoding=UTF-8&useSSL=false
         username: root
         password: 1017~Fulin
 

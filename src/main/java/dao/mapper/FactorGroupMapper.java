@@ -12,5 +12,7 @@ public interface FactorGroupMapper {
 
     List<FactorGroup> findListByNameIfAbsent( @Param("name") String name);
 
+    int deleteByPrimaryKey(@Param("name") String name);
+
 
 }

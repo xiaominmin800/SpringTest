@@ -16,8 +16,8 @@ public class mails {
 
         JavaMailSenderImpl sender = new JavaMailSenderImpl();
         sender.setHost("smtp.mxhichina.com");
-        sender.setUsername("bill@fulintechfin.com");
-        sender.setPassword("Fulin123");
+        sender.setUsername("minqing.chen@fulintechfin.com");
+        sender.setPassword("!QAZxsw2");
         sender.setProtocol("smtp");
         sender.setDefaultEncoding(Charset.defaultCharset().name());
 
@@ -34,8 +34,8 @@ public class mails {
         MimeMessageHelper helper = null;
         try {
             helper = new MimeMessageHelper(message, true);
-            helper.setFrom("bill@fulintechfin.com");
-            helper.setTo("lilong.luo@fulintechfin.com");
+            helper.setFrom("minqing.chen@fulintechfin.com");
+            helper.setTo("minqing.chen@fulintechfin.com");
             helper.setSubject("2B");
             helper.setText("2B", true);
             sender.send(message);
