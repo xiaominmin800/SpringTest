@@ -22,6 +22,7 @@ public class FactorsController {
 
     @Autowired
     private groupService groupService;
+
     @ApiOperation(value = "获取factors")
     @ResponseBody
     @RequestMapping(value =  "group/delFactor", method = RequestMethod.DELETE)
@@ -33,7 +34,7 @@ public class FactorsController {
 
     @ApiOperation(value = "删除factors")
     @ResponseBody
-    @RequestMapping(value =  "group/delFactor", method = RequestMethod.DELETE)
+    @RequestMapping(value =  "group/getFactor", method = RequestMethod.GET)
     public String delFactor(@ApiParam(value = "id") @RequestParam(value="id") String id) {
         //return "nnn";
 

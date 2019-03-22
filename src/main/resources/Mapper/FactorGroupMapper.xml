@@ -18,7 +18,7 @@
   <sql id="Base_Column_List" >
     id, org_code, name_en, name, descri, status, creator, create_time, modifier, last_modify_time
   </sql>
-  <select id="findListByNameIfAbsent" resultType="domain.FactorGroup">
+  <select id="findListByNameIfAbsent" resultType="java.util.Map">
     select
     id, name_en as nameEn, name
     from

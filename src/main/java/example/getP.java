@@ -8,32 +8,11 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class getP {
     public static void main(String[] args) throws Exception {
-        double []temp={
-                -1.2684,
-                0.6905841,
-                0.7841144,
-                0.6099274,
-                0.6451429,
-                0.5771117,
-                0.9042354,
-                0.9336458,
-                0.724956,
-                1.700626,
-                0.416198,
-                -2.7355376
+        double []temp={1,2,3
+
                     };
-        double []X = {
-                0.31,
-                0.31,
-                -0.19,
-                0.29,
-                0.35,
-                -0.23,
-                -0.09,
-                -0.11,
-                0.07,
-                -0.19,
-                0.1
+        double []X = {0.25,0.5
+
         };
         double e = Math.E;
         double z= getP.getz(temp,X);
